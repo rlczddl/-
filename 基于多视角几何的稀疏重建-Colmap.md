@@ -1,9 +1,3 @@
-### 欢迎关注我的微信公众号：Hypochondria 
-![公众号二维码](https://github.com/user-attachments/assets/2f8e41fb-e990-4fef-825a-d1b86fba7c3f)
-
-### 以及我的知乎主页：https://www.zhihu.com/people/yang-shi-lei-62-72
----
-
 本文梳理下笔者对`Colmap`的各个算法模块的理解，不涉及具体细节。如有错误，欢迎评论指出。
 
 ---
@@ -37,4 +31,8 @@
 ## 4.捆绑调整（`BA`）
 基于最小化重投影误差的思想构建非线性最小二乘优化问题，同时优化多个相机姿态和多个三维点，从而减少整个系统的偏移（`drift`）问题。Colmap在图像配准和三角化之后执行局部`BA`，当模型增长到一定比例时进行一次全局`BA`，并且是迭代的进行BA、重三角化和错误观测点过滤三个步骤。此外，`Colmap`基于共视点构建了一个度量方法将具有高重合度的图像分为一组，组内的图像会共用相机参数，从而减少捆绑调整的参数量。
 
+### 欢迎关注我的微信公众号：Hypochondria 
+![公众号二维码](https://github.com/user-attachments/assets/2f8e41fb-e990-4fef-825a-d1b86fba7c3f)
 
+### 以及我的知乎主页：https://www.zhihu.com/people/yang-shi-lei-62-72
+---
